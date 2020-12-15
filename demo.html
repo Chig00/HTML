@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>
+      HTML Demo
+    </title>
+
+    <style>
+      body {
+        color: red;
+      }
+
+      body p {
+        color: blue;
+      }
+
+      body h1 {
+        color: black
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      This is a demo for HTML, CSS, and JS
+    </h1>
+
+    <p>
+      This paragraph was written by HTML code and styled by CSS.
+    </p>
+
+    <script>
+      window.alert("Javascript is running!");
+      window.alert("Cascading Style Sheets styles have been applied!");
+      document.write("This paragraph was written by JS code and styled by CSS.");
+      var form = document.getElementById("form");
+      for (var i=0; i<form.length; i++) {
+        document.write(form.elements[i].name + ": " + form.elements[i].value);
+      }
+    </script>
+
+    <form id="form">
+      <br />
+      <fieldset>
+        <legend>Text Data</legend>
+        Name: <input type="text" name="name" placeholder="Enter your name!" /><br />
+        Age: <input type="text" name="age" placeholder="Enter your age!" /><br />
+      </fieldset>
+      <br />
+
+      <input type="submit" value="Submit!" />
+    </form>
+  </body>
+</html>
+

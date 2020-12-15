@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <script>
+      function getOperator(op) {
+        if (op === "a") {
+          return " + ";
+        }
+        else if (op === "s") {
+          return " - ";
+        }
+        else if (op === "m") {
+          return " * ";
+        }
+        else if (op === "d") {
+          return " / ";
+        }
+      }
+
+      function getResult(x, y, op) {
+        x = parseInt(x);
+        y = parseInt(y);
+        if (op === "a") {
+          return x + y;
+        }
+        else if (op === "s") {
+          return x - y;
+        }
+        else if (op === "m") {
+          return x * y;
+        }
+        else if (op === "d") {
+          return x / y;
+        }
+      }
+
+      var x = window.prompt("x");
+      var op = window.prompt("Operator (a, s, m, or d)");
+      var y = window.prompt("y");
+      if (op === "a" || op === "s" || op === "m" || op === "d") {
+        document.write(x, getOperator(op), y, " = ", getResult(x, y, op));
+      }
+    </script>
+  </body>
+</html>
